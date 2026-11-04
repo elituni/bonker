@@ -1,6 +1,7 @@
 # Bonker
 
-<!-- App description to be written by the repository owner. -->
+Watch out, you'll get bonked if you're naughty!
+Graphics are not my own.
 
 Desktop/service version: **0.3.1**. Firefox companion version: **0.1.2**.
 
