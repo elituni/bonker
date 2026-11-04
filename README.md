@@ -5,6 +5,7 @@ Watch out, you'll get bonked if you're naughty!
 This is vibe coded slop. I wrote 0 lines of code.
 Graphics are also not my own.
 
+Designed and written for Fedora 44 with GNOME. Pretty sure it will crash and burn if you try to run it on anything else. Also might crash and burn anyways even if you're on the right system. If, for some reason, you decide you want to use it, be warned that part of the functionality is to automatically kill any process that tries to start with root privileges, so you should really make sure it does not crash and burn or have some contingency if it does.
 
 ### GPT generated documentation:
 Desktop/service version: **0.3.1**. Firefox companion version: **0.1.2**.
