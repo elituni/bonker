@@ -1,0 +1,7 @@
+{
+  "minutes": 1,
+  "mode": "blacklist",
+  "rules": [{"host": "example.com", "action": "block", "subdomains": false}],
+  "apps": [],
+  "preset_name": null
+}

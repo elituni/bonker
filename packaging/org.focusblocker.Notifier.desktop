@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Bonker Notifications
+Exec=/usr/local/bin/focus-blocker-notifier
+Icon=org.focusblocker.App
+NoDisplay=true
+X-GNOME-Autostart-enabled=true

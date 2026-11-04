@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fedora-focus-blocker"
+version = "0.3.1"
+description = "Bonker session manager for Fedora GNOME and Firefox"
+requires-python = ">=3.12"
+dependencies = ["idna>=3.7"]
+
+[project.scripts]
+focus-blocker = "focus_blocker.ui:main"
+focus-blocker-service = "focus_blocker.service:main"
+focus-blocker-native = "focus_blocker.native:main"
+focus-blocker-cli = "focus_blocker.cli:main"
+
+[tool.setuptools]
+packages = ["focus_blocker"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

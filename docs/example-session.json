@@ -1,0 +1,10 @@
+{
+  "minutes": 25,
+  "mode": "blacklist",
+  "rules": [
+    {"host": "youtube.com", "action": "block", "subdomains": true},
+    {"host": "music.youtube.com", "action": "allow", "subdomains": true}
+  ],
+  "apps": [],
+  "preset_name": null
+}

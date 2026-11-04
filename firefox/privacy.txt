@@ -1,0 +1,28 @@
+Bonker — local communication disclosure
+
+This extension is a companion to the Fedora Bonker desktop application.
+It is activated only by administrator-managed installation with an explicit
+localBridgeConsent policy. Ordinary/manual installation does not contact the
+native helper or impose website restrictions.
+
+During authorized operation it sends the local helper:
+- a random identifier for this running extension instance;
+- the identifier of the session rules it has applied;
+- whether private-window access and administrator installation are enabled.
+
+The helper returns the configured website rules, remaining session time and
+session state, including timed-break deadlines when supported by the desktop app.
+The extension caches those rules and their session/break expiry locally.
+Addresses of visited pages are examined inside Firefox to enforce the rules.
+They are not sent to the native helper. Page contents, browsing history,
+passwords and written stop reasons are not sent by this extension.
+
+There are no remote analytics, advertising services or telemetry endpoints.
+No data is transmitted off the computer by this extension. Local technical
+status reporting is disclosed as technicalAndInteraction because Mozilla's
+disclosure rules also cover native messaging outside the browser.
+
+For normal use, the desktop installer records administrator authorization for
+this communication. Normal uninstall is available outside an active session
+and removes the managed integration. An administrator can also revoke the
+localBridgeConsent policy; the extension then stops native communication.

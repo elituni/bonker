@@ -1,0 +1,55 @@
+{
+  "manifest_version": 2,
+  "name": "Bonker",
+  "version": "0.1.2",
+  "description": "Bonks distracting websites during your locally managed sessions.",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "focus-blocker@local.invalid",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ],
+        "optional": [
+          "technicalAndInteraction"
+        ]
+      }
+    }
+  },
+  "permissions": [
+    "<all_urls>",
+    "webRequest",
+    "webRequestBlocking",
+    "webNavigation",
+    "tabs",
+    "storage",
+    "nativeMessaging"
+  ],
+  "background": {
+    "scripts": [
+      "rules.js",
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Bonker",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png"
+    }
+  },
+  "web_accessible_resources": [
+    "blocked.html"
+  ],
+  "incognito": "spanning",
+  "content_security_policy": "script-src 'self'; object-src 'none'"
+}

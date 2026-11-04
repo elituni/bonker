@@ -1,0 +1,7 @@
+{
+  "minutes": 1,
+  "mode": "blacklist",
+  "rules": [],
+  "apps": ["org.gnome.Calculator.desktop"],
+  "preset_name": null
+}

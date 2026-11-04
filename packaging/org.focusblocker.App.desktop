@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Bonker
+Exec=/usr/local/bin/focus-blocker
+Icon=org.focusblocker.App
+Terminal=false
+Categories=Utility;
+StartupNotify=true
+StartupWMClass=org.focusblocker.App

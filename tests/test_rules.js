@@ -1,0 +1,10 @@
+"use strict";
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const rules = require('../firefox/rules.js');
+const cases = JSON.parse(fs.readFileSync(path.join(__dirname, 'rule_cases.json'), 'utf8'));
+for (const item of cases) assert.equal(rules.evaluate(item.url, item).allowed, item.allowed, item.url);
+assert.equal(rules.evaluate('about:preferences', {mode: 'whitelist', rules: []}).allowed, true);
+assert.equal(rules.evaluate('https://example.org', null).allowed, true);
+console.log(`${cases.length + 2} Firefox rule assertions passed`);

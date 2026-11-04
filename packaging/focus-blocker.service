@@ -1,0 +1,32 @@
+[Unit]
+Description=Bonker session and enforcement service
+After=local-fs.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/focus-blocker-service
+Restart=on-failure
+RestartSec=1
+User=root
+Group=root
+UMask=0077
+RuntimeDirectory=focus-blocker
+RuntimeDirectoryMode=0755
+StateDirectory=focus-blocker
+StateDirectoryMode=0700
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=read-only
+PrivateTmp=yes
+RestrictAddressFamilies=AF_UNIX
+LockPersonality=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictRealtime=yes
+# Read access to /proc, other process roots, and user desktop entries is required.
+# The daemon signals only the configured user's identified app processes.
+ReadWritePaths=/run/focus-blocker /var/lib/focus-blocker
+
+[Install]
+WantedBy=multi-user.target
