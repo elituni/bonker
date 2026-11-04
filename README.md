@@ -1,7 +1,9 @@
 # Bonker
 
 Watch out, you'll get bonked if you're naughty!
-Graphics are not my own.
+
+This is vibe coded slop. I wrote 0 lines of code.
+Graphics are also not my own.
 
 
 ### GPT generated documentation:
